@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/humanity/jquery-ui.css"
+          type="text/css"/>-->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <title></title>
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li><a href="#tab-public">みんなのおでんき</a></li>
+        <li><a href="#tab-my">マイおでんき</a></li>
+        <li><a href="#tab-help">お知らせ</a></li>
+    </ul>
+    <div id="tab-public"></div>
+    <div id="tab-my"></div>
+    <div id="tab-help"></div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#tabs").tabs();
+    });
+</script>
+</body>
+</html>
