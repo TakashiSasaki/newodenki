@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title>みんなでおでんき</title>
     <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/humanity/jquery-ui.css"
           type="text/css"/>-->
     <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css"/>-->
@@ -18,13 +19,49 @@
         <li><a href="#tab-my">マイおでんき</a></li>
         <li><a href="#tab-help">お知らせ</a></li>
     </ul>
-    <div id="tab-public"></div>
-    <div id="tab-my"></div>
-    <div id="tab-help"></div>
+    <div id="tab-public">
+        <div class="accordion-in-tab">
+            <div><h1>a</h1>
+
+                <p>aaa</p>
+            </div>
+            <div><h1>b</h1>
+
+                <p>bbb</p>
+            </div>
+        </div>
+    </div>
+    <div id="tab-my">
+        <div class="accordion-in-tab">
+            <div>
+                <h1></h1>
+            </div>
+        </div>
+    </div>
+    <div id="tab-help">
+        <div class="accordion-in-tab">
+            <div>
+                <h1>
+                    「みんなでおでんき」とは
+                </h1>
+
+                <p>
+                    共助による安全安心なエネルギーの利用を目指し、再生可能エネルギーによる発電量を「見せる化」することで
+                    コミュニティの形成とモチベーションの維持を支援するプロジェクトです。ただいま準備中です。
+                    Twitterアカウント@odenkiをフォローして続報をお待ち下さい。
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     $(document).ready(function () {
         $("#tabs").tabs();
+        $(".accordion-in-tab").accordion({
+            header: "h1",
+            collapsible: true,
+            heightStyle: "content"
+        });
     });
 </script>
 </body>

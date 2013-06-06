@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e851072-bee2-4d88-9be4-8fb1e7973ec7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newodenki.css" afterPath="$PROJECT_DIR$/newodenki.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newodenki.html" afterPath="$PROJECT_DIR$/newodenki.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="newodenki.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/newodenki.html" changelist="4e851072-bee2-4d88-9be4-8fb1e7973ec7" time="1370559518758" ignored="false" />
+    <file path="/newodenki.html" changelist="4e851072-bee2-4d88-9be4-8fb1e7973ec7" time="1370560915657" ignored="false" />
     <file path="/Dummy.txt" changelist="4e851072-bee2-4d88-9be4-8fb1e7973ec7" time="1370555023669" ignored="false" />
-    <file path="/newodenki.css" changelist="4e851072-bee2-4d88-9be4-8fb1e7973ec7" time="1370559229212" ignored="false" />
+    <file path="/newodenki.css" changelist="4e851072-bee2-4d88-9be4-8fb1e7973ec7" time="1370560393194" ignored="false" />
+    <file path="/a.dummy" changelist="4e851072-bee2-4d88-9be4-8fb1e7973ec7" time="1370560927224" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,19 +31,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="newodenki.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="newodenki.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/newodenki.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="50" selection-start="588" selection-end="588" vertical-scroll-proportion="-5.8846154">
+            <state line="59" column="42" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.656682">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.32304037">
+            <state line="13" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="-8.5">
               <folding />
             </state>
           </provider>
@@ -49,7 +52,7 @@
       <file leaf-file-name="newodenki.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newodenki.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="17" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
+            <state line="9" column="23" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -73,15 +76,15 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/newodenki.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/newodenki.css" />
         <option value="$PROJECT_DIR$/newodenki.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="576" />
-    <option name="y" value="357" />
+    <option name="x" value="371" />
+    <option name="y" value="416" />
     <option name="width" value="1434" />
     <option name="height" value="955" />
   </component>
@@ -202,11 +205,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="576" y="357" width="1434" height="955" extended-state="0" />
+    <frame x="371" y="416" width="1434" height="955" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.59950554" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40049443" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -217,7 +221,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -293,21 +296,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/newodenki.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="242" selection-end="242" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newodenki.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="50" selection-start="588" selection-end="588" vertical-scroll-proportion="-5.8846154">
+        <state line="9" column="23" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.32304037">
+        <state line="13" column="0" selection-start="337" selection-end="337" vertical-scroll-proportion="-8.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newodenki.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="42" selection-start="1892" selection-end="1892" vertical-scroll-proportion="0.656682">
           <folding />
         </state>
       </provider>
