@@ -1,0 +1,11 @@
+#tabs {
+    background-image: url("https://twimg0-a.akamaihd.net/profile_images/1522990803/___________reasonably_small.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+}
+
+.ui-widget-header{
+    background: none;
+    border: none;
+}
