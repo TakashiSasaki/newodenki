@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e851072-bee2-4d88-9be4-8fb1e7973ec7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newodenki.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newodenki.html" afterPath="$PROJECT_DIR$/newodenki.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="4e851072-bee2-4d88-9be4-8fb1e7973ec7" name="Default" comment="" />
     <ignored path="newodenki.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/newodenki.html" changelist="4e851072-bee2-4d88-9be4-8fb1e7973ec7" time="1370559206844" ignored="false" />
@@ -30,10 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="newodenki.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="newodenki.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/newodenki.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="65" selection-start="364" selection-end="364" vertical-scroll-proportion="0.23502304">
+            <state line="9" column="19" selection-start="575" selection-end="575" vertical-scroll-proportion="-5.8846154">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -292,7 +297,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/newodenki.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="65" selection-start="364" selection-end="364" vertical-scroll-proportion="0.23502304">
+        <state line="9" column="19" selection-start="575" selection-end="575" vertical-scroll-proportion="-5.8846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
