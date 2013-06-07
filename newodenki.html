@@ -7,10 +7,12 @@
     <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css"/>-->
     <link href="css/sunny/jquery-ui-1.10.3.custom.css" rel="stylesheet">
     <link rel="stylesheet" href="newodenki.css" type="text/css"/>
+    <link href="css/jquery-ui-timepicker-addon.css" rel="stylesheet" type="text/css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>-->
     <script src="js/jquery-ui-1.10.3.custom.js"></script>
-    <title></title>
+    <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-sliderAccess.js"></script>
 </head>
 <body>
 <div id="tabs">
@@ -48,43 +50,77 @@
             </div>
             <div>
                 <h1>機器の登録</h1>
-                <ul>
-                    <h2>機器名</h2>
-                    <button onclick="$('#info-module').dialog('open')"/>
-                    <p class="info" id="info-module">
 
-                        製品によっては、機器名を「モジュール名」と表記しているものもあります。</p>
+                <div>
+                    <span onclick='(function(){$("#info-module").dialog("open")})()'>機器名
+                        </span><input id="productName" name="productName"/>
+
+                    <p class="info" id="info-module">
+                        製品によっては、機器名を「モジュール名」もしくは「moduleId」と表記しているものもあります。</p>
                     <script>
                         $('.info').dialog({
                             autoOpen: false,
                             title: '機器名について',
-                            closeOnEscape: false,
+                            closeOnEscape: true,
                             modal: true
                         });
                     </script>
-                </ul>
-                <p></p>
+                    <span>製造番号</span>
+                    <input id="serialNumber" name="serialNumber"/>
+                    <span>モジュール名</span>
+                    <input id="moduleId" name="moduleId"/>
+                </div>
             </div>
             <div>
-                <h1>
-                </h1>
+                <h1>動作の予約</h1>
+
+                <div>
+                    <div>
+                        <span>コンセント１予約日時</span>
+                        <input id="scheduledDateTime1" name="scheduledDateTime"/>
+                        <script>
+                            $('#scheduledDateTime1').datetimepicker();
+                        </script>
+                    </div>
+                    <div><input type="radio" name="expedtedState1" value="true">オン /
+                        <input type="radio" name="expedtedState1" value="false">オフ /
+                        <input type="radio" name="expectedState1" value="null">何もしない
+                    </div>
+                    <div>
+                        <span>コンセント２予約日時</span>
+                        <input id="scheduledDateTime2" name="scheduledDateTime"/>
+                        <script>
+                            $('#scheduledDateTime2').datetimepicker();
+                        </script>
+                    </div>
+                    <div><input type="radio" name="expedtedState2" value="true">オン /
+                        <input type="radio" name="expedtedState2" value="false">オフ /
+                        <input type="radio" name="expectedState2" value="null">何もしない
+                    </div>
+                    <button>予約する</button>
+                </div>
             </div>
+
         </div>
     </div>
     <div id="tab-help">
-        <div class="accordion-in-tab">
-            <div>
-                <h1>
-                    「みんなでおでんき」とは
-                </h1>
+        <div>
+            <h1>
+                「みんなでおでんき」とは
+            </h1>
 
-                <p>
-                    共助による安全安心なエネルギーの利用を目指し、再生可能エネルギーによる発電量を「見せる化」することで
-                    コミュニティの形成とモチベーションの維持を支援するプロジェクトです。ただいま準備中です。
-                    Twitterアカウント@odenkiをフォローして続報をお待ち下さい。
-                </p>
-            </div>
+            <p>
+                共助による安全安心なエネルギーの利用を目指し、再生可能エネルギーによる発電量を「見せる化」することで
+                コミュニティの形成とモチベーションの維持を支援するプロジェクトです。ただいま準備中です。
+                Twitterアカウント<a href="http://twitter.com/odenki" target="_blank">@odenki</a>をフォローして続報をお待ち下さい。
+            </p>
         </div>
+        <h1>関連プロジェクト</h1>
+
+        <p>関連プロジェクトの「<a href="http://dcity-ehime.com/e-eco/ank/" target="_blank">みんなでエコプロジェクト ｅエコえひめ</a>」もよろしく。</p>
+
+        <p><a href="" target="_blank"><img src="http://dcity-ehime.com/e-eco/ank/images/rogo.png"/></a></p>
+
     </div>
 </div>
 
