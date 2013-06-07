@@ -1,10 +1,12 @@
-#tabs {
-    /*background-image: url("https://twimg0-a.akamaihd.net/profile_images/1522990803/___________reasonably_small.png");*/
-    /*background-image: url("http://dcity-ehime.com/e-eco/ank/images/ban-denki.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 10%;*/
+#tabs li {
+    text-align: center;
 }
+#tabs li img {
+    height: 50px;
+    width: 50px;
+}
+
+
 #title {
     width: 99%;
     height: 110px;
