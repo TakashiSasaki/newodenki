@@ -15,11 +15,14 @@
     <script type="text/javascript" src="js/jquery-ui-sliderAccess.js"></script>
 </head>
 <body>
+<div id="title">
+</div>
 <div id="tabs">
     <ul>
-        <li><a href="#tab-public">みんなのおでんき</a></li>
-        <li><a href="#tab-my">マイおでんき</a></li>
-        <li><a href="#tab-help">お知らせ</a></li>
+        <li><a href="#tab-public">みんなのおでんき<br/>アイコン</a></li>
+        <li><a href="#tab-my">マイおでんき<br/>アイコン</a></li>
+        <li><a href="#tab-socialpp">ソーシャルコンセント<br/>アイコン</a></li>
+        <li><a href="#tab-help">プロジェクト<br/>アイコン</a></li>
     </ul>
     <div id="tab-public">
         <div class="accordion-in-tab">
@@ -46,10 +49,11 @@
             <div>
                 <h1>マイ発電量</h1>
 
-                <p></p>
+                <p>ここに発電量のグラフが入ります</p>
             </div>
             <div>
                 <h1>機器の登録</h1>
+
                 <div>
                     <span onclick='(function(){$("#info-module").dialog("open")})()'>機器名
                         </span><input id="productName" name="productName"/>
@@ -100,8 +104,30 @@
                     <button>予約する</button>
                 </div>
             </div>
-
+            <div>
+                <h1></h1>
+            </div>
         </div>
+    </div>
+    <div id="tab-socialpp">
+        ソーシャルコンセントとは...
+
+
+        <img src="http://nfcjapan.jp/appli/images/appli_img_03_01.gif"/>
+
+        アイコンを拝借、改変して
+        ICカードでON←アイコン
+        なんでもいいからかざして利用してね。
+        あとからウェブサイトで登録してね。
+        （オンライン）
+        スマホでON←アイコン
+        スマホをかざして利用してね。
+        専用アプリのインストールが始まります。
+        （オフライン）
+
+        <p>
+
+        </p>
     </div>
     <div id="tab-help">
         <div>
@@ -126,7 +152,13 @@
 
 <script>
     $(document).ready(function () {
-        $("#tabs").tabs();
+        $("#tabs").tabs({
+            active: sessionStorage.getItem("newTab"),
+            activate: function (event, ui) {
+                var newTab = ui.newTab.index();
+                sessionStorage.setItem("newTab", newTab);
+            }
+        });
         $(".accordion-in-tab").accordion({
             header: "h1",
             collapsible: true,

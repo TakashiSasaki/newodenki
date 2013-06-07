@@ -1,8 +1,17 @@
 #tabs {
-    background-image: url("https://twimg0-a.akamaihd.net/profile_images/1522990803/___________reasonably_small.png");
+    /*background-image: url("https://twimg0-a.akamaihd.net/profile_images/1522990803/___________reasonably_small.png");*/
+    /*background-image: url("http://dcity-ehime.com/e-eco/ank/images/ban-denki.png");
     background-repeat: no-repeat;
     background-position: right top;
-    background-size: auto;
+    background-size: 10%;*/
+}
+#title {
+    width: 99%;
+    height: 110px;
+    background-image: url("http://dcity-ehime.com/e-eco/ank/images/ban-denki.png");
+    background-repeat: repeat;
+    /*background-position: right top;*/
+    background-size: 110px;
 }
 
 .ui-widget-header{
@@ -10,9 +19,9 @@
     /* border: none; */
 }
 
-.ui-tabs-nav{
+/*.ui-tabs-nav{
     height: 100px;
-}
+}*/
 
 .ui-dialog-title{
     color: black;
