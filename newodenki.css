@@ -13,3 +13,7 @@
 .ui-tabs-nav{
     height: 100px;
 }
+
+.ui-dialog-title{
+    color: black;
+}

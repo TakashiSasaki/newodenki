@@ -21,20 +21,53 @@
     </ul>
     <div id="tab-public">
         <div class="accordion-in-tab">
-            <div><h1>a</h1>
+            <div>
+                <h1>みんなの発電量</h1>
 
-                <p>aaa</p>
+                <p>ここにグラフが入ります。</p>
             </div>
-            <div><h1>b</h1>
+            <div>
+                <h1>みんなの発電地図</h1>
 
-                <p>bbb</p>
+                <p>ここに地図が入ります。</p>
+            </div>
+            <div>
+                <h1>みんなの発電ランキング</h1>
+
+                <p>ここにランキングが入ります。</p>
             </div>
         </div>
+
     </div>
     <div id="tab-my">
         <div class="accordion-in-tab">
             <div>
-                <h1></h1>
+                <h1>マイ発電量</h1>
+
+                <p></p>
+            </div>
+            <div>
+                <h1>機器の登録</h1>
+                <ul>
+                    <h2>機器名</h2>
+                    <button onclick="$('#info-module').dialog('open')"/>
+                    <p class="info" id="info-module">
+
+                        製品によっては、機器名を「モジュール名」と表記しているものもあります。</p>
+                    <script>
+                        $('.info').dialog({
+                            autoOpen: false,
+                            title: '機器名について',
+                            closeOnEscape: false,
+                            modal: true
+                        });
+                    </script>
+                </ul>
+                <p></p>
+            </div>
+            <div>
+                <h1>
+                </h1>
             </div>
         </div>
     </div>
@@ -54,6 +87,7 @@
         </div>
     </div>
 </div>
+
 <script>
     $(document).ready(function () {
         $("#tabs").tabs();
