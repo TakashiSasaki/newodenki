@@ -66,7 +66,7 @@
                 <h1>機器登録</h1>
                 <div>
                     <span onclick='(function(){$("#info-module").dialog("open")})()'>機器名
-                        </span><input id="productName" name="productName"/>
+                        </span><input id="productName"/>
 
                     <p class="info" id="info-module">
                         製品によっては、機器名を「モジュール名」もしくは「moduleId」と表記しているものもあります。</p>
@@ -79,10 +79,10 @@
                         });
                     </script>
                     <span>製造番号</span>
-                    <input id="serialNumber" name="serialNumber"/>
+                    <input id="serialNumber" />
                     <span>モジュール名</span>
-                    <input id="moduleId" name="moduleId"/>
-                    <button>登録する</button>
+                    <input id="moduleId" />
+                    <button onclick="registerModule()">登録する</button>
                 </div>
             </div>
             <div>
@@ -159,7 +159,6 @@
 
     </div>
 </div>
-
 <script>
     $(document).ready(function () {
         $("#tabs").tabs({
@@ -174,7 +173,9 @@
             collapsible: true,
             heightStyle: "content"
         });
+        //refreshModule();
     });
 </script>
+<script src="newodenki.js"></script>
 </body>
 </html>
