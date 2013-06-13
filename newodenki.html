@@ -91,44 +91,57 @@
 
                 <div id="relays">
                     <div id="relay1" class="relay">
+                        <div><span>コンセント１予約日時</span><input id="scheduledDate1" class="scheduledDate"/>
+                            <input id="scheduledTime1" class="scheduledTime"/></div>
                         <div><span>リレーID</span> <input type="text" class="relayId" id="relayId1"/></div>
-                        <div><span>コンセント１予約日時</span><input id="scheduledDateTime1" class="scheduledDateTime"/></div>
                         <script>
-                            $('#scheduledDateTime1').datetimepicker();
+                            $('#scheduledDate1').datetimepicker({
+                                altField: "#scheduledTime1",
+                                dateFormat: "yy-mm-dd"
+                            });
                         </script>
-                        <div><input type="radio" name="expectedState1" id="expectedState1True" value="true"
-                                    checked="false">オン /
-                            <input type="radio" name="expectedState1" id="expectedState1False" value="false"
-                                   checked="false">オフ /
-                            <input type="radio" name="expectedState1" id="expectedState1Null" value="null"
-                                   checked="false">何もしない
+                        <div><input type="radio" checked="false" class="radioTrue" name="expectedState1">オン /
+                            <input type="radio" checked="false" class="radioFalse" name="expectedState1">オフ /
+                            <input type="radio" checked="false" class="radioNull" name="expectedState1">何もしない
                             <button>予約する</button>
                         </div>
                     </div>
                     <div id="relay2" class="relay">
-                        <span>コンセント２予約日時</span>
+                        <div>
+                            <span>コンセント２予約日時</span>
+                            <input id="scheduledDate2" class="scheduledDate"/>
+                            <input id="scheduledTime2" class="scheduledTime"/>
+                        </div>
+                        <script>
+                            $('#scheduledDate2').datetimepicker({
+                                altField: "#scheduledTime2",
+                                dateFormat: "yy-mm-dd"
+                            });
+                        </script>
 
                         <div>
                             <span>リレーID</span>
-                            <input id="scheduledDateTime2" name="scheduledDateTime"/></div>
-                        <script>
-                            $('#scheduledDateTime2').datetimepicker();
-                        </script>
-                        <div><input type="radio" name="expectedState2" id="expectedState2True" value="true"
-                                    checked="false">オン /
-                            <input type="radio" name="expectedState2" id="expectedState2False" value="false"
-                                   checked="false">オフ /
-                            <input type="radio" name="expectedState2" id="expectedState2Null" value="null"
-                                   checked="false">何もしない
+                            <input id="relayId2"/></div>
+                        <div><input type="radio" name="expectedState2" checked="false" class="radioTrue">オン /
+                            <input type="radio" name="expectedState2" checked="false" class="radioFalse">オフ /
+                            <input type="radio" name="expectedState2" checked="false" class="radioNull">何もしない
                             <button>予約する</button>
                         </div>
                     </div>
                     <script>
-                        $("#relays").each(function () {
+                        $("#relay1").each(function () {
                                     var relay = $(this);
                                     var button = $(this).find("button");
                                     button.on("click", function () {
-                                        registerRelay(relay);
+                                        registerRelay(relay, 1);
+                                    });
+                                }
+                        );
+                        $("#relay2").each(function () {
+                                    var relay = $(this);
+                                    var button = $(this).find("button");
+                                    button.on("click", function () {
+                                        registerRelay(relay, 2);
                                     });
                                 }
                         );

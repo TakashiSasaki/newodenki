@@ -45,29 +45,36 @@ function reloadRelays() {
 }
 
 function redrawRelays() {
-    for (var i = 0; i < 2; ++i) {
+    for (var i = 1; i <= 2; ++i) {
         var relay_id = localStorage.getItem("relayId" + i);
+        var scheduled_date = localStorage.getItem("scheduledDate" + i);
+        var scheduled_time = localStorage.getItem("scheduledTime" + i);
         var scheduled_date_time = localStorage.getItem("scheduledDateTime" + i);
         var expected_state = localStorage.getItem("expectedState" + i);
         $("#relayId" + i).val(relay_id);
-        $("#scheduledDateTime" + i).val(scheduled_date_time);
-        if (expected_state == true) {
-            $("#expectedState" + i + "True").attr("checked", true);
-            $("#expectedState" + i + "False").attr("checked", false);
-            $("#expectedState" + i + "Null").attr("checked", false);
-        }
-        if (expected_state == false) {
-            $("#expectedState" + i + "True").attr("checked", false);
-            $("#expectedState" + i + "False").attr("checked", true);
-            $("#expectedState" + i + "Null").attr("checked", false);
-        }
-        if (expected_state == null) {
-            $("#expectedState" + i + "True").attr("checked", false);
-            $("#expectedState" + i + "False").attr("checked", false);
-            $("#expectedState" + i + "Null").attr("checked", true);
-        }
+        $("#scheduledDate" + i).val(scheduled_date);
+        $("#scheduledTime" + i).val(scheduled_time);
+        alert(expected_state);
+        setRadioButton($("#relayId" + i), expected_state);
+//        if (expected_state == true) {
+//            $("#expectedState" + i + "True").attr("checked", true);
+//            $("#expectedState" + i + "False").attr("checked", false);
+//            $("#expectedState" + i + "Null").attr("checked", false);
+//        }
+//        if (expected_state == false) {
+//            $("#expectedState" + i + "True").attr("checked", false);
+//            $("#expectedState" + i + "False").attr("checked", true);
+//            $("#expectedState" + i + "Null").attr("checked", false);
+//        }
+//        if (expected_state == null) {
+//            $("#expectedState" + i + "True").attr("checked", false);
+//            $("#expectedState" + i + "False").attr("checked", false);
+//            $("#expectedState" + i + "Null").attr("checked", true);
+//        }
     }
 }
+
+$(document).ready(redrawRelays);
 
 function updateStorage(json_response) {
     localStorage.setItem("productName", json_response.productName);
@@ -75,7 +82,41 @@ function updateStorage(json_response) {
     localStorage.setItem("moduleId", json_response.moduleId);
 }
 
-function registerRelay(relay_element) {
+function getRadioButton(element) {
+    if (element.find(".radioTrue").is(":checked")) return true;
+    if (element.find(".radioFalse").is(":checked")) return false;
+    if (element.find(".radioNull").is(":checked")) return null;
+}
+
+$(document).ready(function () {
+    setRadioButton($("#relay1"), true);
+});
+
+function setRadioButton(element, state) {
+    var radio_true = element.find(".radioTrue");
+    var radio_false = element.find(".radioFalse");
+    var radio_null = element.find(".radioNull");
+    if (state == true) {
+        radio_true.attr('checked', true);
+        return;
+    } else {
+        radio_true.attr('checked', false);
+    }
+    if (state == false) {
+        radio_false.attr('checked', true);
+        return;
+    } else {
+        radio_false.attr("checked", false);
+    }
+    if (state == null) {
+        radio_null.attr("checked", true);
+        return;
+    } else {
+        radio_null.attr("checked", false);
+    }
+}
+
+function registerRelay(relay_element, relay_index) {
     var product_name = localStorage.getItem("productName");
     if (!product_name) return;
     var serial_number = localStorage.getItem("serialNumber");
@@ -83,8 +124,14 @@ function registerRelay(relay_element) {
     var module_id = localStorage.getItem("moduleId");
     if (!module_id) return;
     var relay_id = relay_element.find(".relayId").val();
-    var expected_state = relay_element.find(".expectedState").val();
-    var scheduled_date_time = relay_element.find(".scheduledDateTime").val();
+    localStorage.setItem("relayId" + relay_index, relay_id);
+    var expected_state = getRadioButton(relay_element);
+    localStorage.setItem("expectedState" + relay_index, expected_state);
+    var scheduled_date = relay_element.find(".scheduledDate").val();
+    localStorage.setItem("scheduledDate" + relay_index, scheduled_date);
+    var scheduled_time = relay_element.find(".scheduledTime").val();
+    localStorage.setItem("scheduledTime" + relay_index, scheduled_time);
+    var scheduled_date_time = scheduled_date + "T" + scheduled_time + ":00+09:00";
     var url = "/api/Relays/" + product_name + "/" + serial_number + "/" + module_id;
     var data = {
         relayId: relay_id,
@@ -95,18 +142,10 @@ function registerRelay(relay_element) {
         url: url,
         type: "POST",
         dataType: "json",
-        contentType: "application/json",
+        //contentType: "application/json",
         data: data,
         success: function (json_response) {
-            for (var i = 0;
-                 i < json_response.length; ++i
-                ) {
-                var relay = json_response[i];
-                localStorage["relayId" + i] = relay.relayId;
-                localStorage["scheduledDateTime" + i] = relay.scheduledDateTime;
-                localStorage["expectedState" + i] = relay.expectedState;
-            }
-            redrawRelays();
+            alert("予約しました");
         },
         error: function (json_response) {
         }
