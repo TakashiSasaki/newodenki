@@ -64,6 +64,7 @@
             </div>
             <div>
                 <h1>機器登録</h1>
+
                 <div>
                     <span onclick='(function(){$("#info-module").dialog("open")})()'>機器名
                         </span><input id="productName"/>
@@ -79,39 +80,60 @@
                         });
                     </script>
                     <span>製造番号</span>
-                    <input id="serialNumber" />
+                    <input id="serialNumber"/>
                     <span>モジュール名</span>
-                    <input id="moduleId" />
+                    <input id="moduleId"/>
                     <button onclick="registerModule()">登録する</button>
                 </div>
             </div>
             <div>
                 <h1>動作の予約</h1>
 
-                <div>
-                    <div>
-                        <span>コンセント１予約日時</span>
-                        <input id="scheduledDateTime1" name="scheduledDateTime"/>
+                <div id="relays">
+                    <div id="relay1" class="relay">
+                        <div><span>リレーID</span> <input type="text" class="relayId" id="relayId1"/></div>
+                        <div><span>コンセント１予約日時</span><input id="scheduledDateTime1" class="scheduledDateTime"/></div>
                         <script>
                             $('#scheduledDateTime1').datetimepicker();
                         </script>
+                        <div><input type="radio" name="expectedState1" id="expectedState1True" value="true"
+                                    checked="false">オン /
+                            <input type="radio" name="expectedState1" id="expectedState1False" value="false"
+                                   checked="false">オフ /
+                            <input type="radio" name="expectedState1" id="expectedState1Null" value="null"
+                                   checked="false">何もしない
+                            <button>予約する</button>
+                        </div>
                     </div>
-                    <div><input type="radio" name="expedtedState1" value="true">オン /
-                        <input type="radio" name="expedtedState1" value="false">オフ /
-                        <input type="radio" name="expectedState1" value="null">何もしない
-                    </div>
-                    <div>
+                    <div id="relay2" class="relay">
                         <span>コンセント２予約日時</span>
-                        <input id="scheduledDateTime2" name="scheduledDateTime"/>
+
+                        <div>
+                            <span>リレーID</span>
+                            <input id="scheduledDateTime2" name="scheduledDateTime"/></div>
                         <script>
                             $('#scheduledDateTime2').datetimepicker();
                         </script>
+                        <div><input type="radio" name="expectedState2" id="expectedState2True" value="true"
+                                    checked="false">オン /
+                            <input type="radio" name="expectedState2" id="expectedState2False" value="false"
+                                   checked="false">オフ /
+                            <input type="radio" name="expectedState2" id="expectedState2Null" value="null"
+                                   checked="false">何もしない
+                            <button>予約する</button>
+                        </div>
                     </div>
-                    <div><input type="radio" name="expedtedState2" value="true">オン /
-                        <input type="radio" name="expedtedState2" value="false">オフ /
-                        <input type="radio" name="expectedState2" value="null">何もしない
-                    </div>
-                    <button>予約する</button>
+                    <script>
+                        $("#relays").each(function () {
+                                    var relay = $(this);
+                                    var button = $(this).find("button");
+                                    button.on("click", function () {
+                                        registerRelay(relay);
+                                    });
+                                }
+                        );
+                    </script>
+
                 </div>
             </div>
             <div>

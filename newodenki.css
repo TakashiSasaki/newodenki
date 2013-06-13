@@ -6,6 +6,10 @@
     width: 50px;
 }
 
+.relay {
+    border-style: solid;
+    border-width: 1px;
+}
 
 #title {
     width: 99%;
