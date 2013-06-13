@@ -54,7 +54,6 @@ function redrawRelays() {
         $("#relayId" + i).val(relay_id);
         $("#scheduledDate" + i).val(scheduled_date);
         $("#scheduledTime" + i).val(scheduled_time);
-        alert(expected_state);
         setRadioButton($("#relayId" + i), expected_state);
 //        if (expected_state == true) {
 //            $("#expectedState" + i + "True").attr("checked", true);
