@@ -11,15 +11,15 @@ function setCurrentOdenkiId() {
     }
 
     $.ajax({
-        url: API_HOST + "/api/OdenkiUser/CurrentOdenkiId",
+        url: "/api/OdenkiUser/CurrentOdenkiId",
         type: "POST",
         dataType: "json",
         //contentType: "application/json",
         data: {
-            "currentOdenkiId": current_odenki_id
+            "odenkiId": current_odenki_id
         },
         success: function (json_response) {
-            alert("currentOdenkiId was set");
+            alert("currentOdenkiId was set to " + current_odenki_id);
             current_odenki_id = json_response["result"]["odenkiId"];
             if (current_odenki_id) {
                 localStorage.set("currentOdenkiId", current_odenki_id);
@@ -27,6 +27,7 @@ function setCurrentOdenkiId() {
             updateCurrentOdenkiId();
         },
         error: function (json_response) {
+            alert("failed to set currentOdenkiId to " + current_odenki_id);
         }
     });
 }
