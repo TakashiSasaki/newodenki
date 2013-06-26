@@ -13,6 +13,7 @@
     <script src="js/jquery-ui-1.10.3.custom.js"></script>
     <script type="text/javascript" src="js/jquery-ui-timepicker-addon.js"></script>
     <script type="text/javascript" src="js/jquery-ui-sliderAccess.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
 </head>
 <body>
 <div id="tabs">
@@ -61,6 +62,13 @@
                 <h1>マイ発電量</h1>
 
                 <p>ここに発電量のグラフが入ります</p>
+            </div>
+            <div>
+                <h1>ユーザーID設定（デモ用）</h1>
+                <span>ユーザーID（整数）</span>
+                <input id="currentOdenkiId"/>
+                <script src="js/currentOdenkiId.js"></script>
+                <button onclick="setCurrentOdenkiId()">登録する</button>
             </div>
             <div>
                 <h1>機器登録</h1>
